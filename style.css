@@ -1,0 +1,49 @@
+/*
+COLORPALETT
+
+--------------------------------------------------
+HEADLINE:   #fffffe
+PARAGRAF: #a7a9be
+BUTTON/HIGHLIGHTS:  #ff8906
+BUTTONTEXT: #fffffe
+EDGES: black;
+STRONG SUITABLE COLORS: #f25f4c   ,   #e53170
+--------------------------------------------------
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Reem+Kufi+Ink&display=swap');
+
+
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family:Poppins;
+}
+body{
+  width:100%;
+  height:100vh;
+  background-color: #0f0e17;
+}
+
+header{
+  color:#fffffe;
+  height:10%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+h1{
+  text-align: center;
+  font-size:3rem;
+}
+#man{
+  color:#e53170;
+}
+
+.container {
+  height:90%;
+  width:100%;
+}
