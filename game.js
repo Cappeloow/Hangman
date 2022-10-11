@@ -54,28 +54,41 @@ const wordDisplayer = document.querySelector("#wordDisplayer")
 var lettersOfWord = choosenWord.split("");
 // break down the word in letters
 //loop to see if the letter is in the array of letters
-function splitWord(){
+function displayWord(){
   wordDisplayer.innerHTML += lettersOfWord;
   wordDisplayer.style.display="none";
 }
-splitWord();
+displayWord();
 
 
 function checkIfCorrect(){
+  
   for(const letter of lettersOfWord)
   {
-  
+    
     if(inputLetter.value ===letter){
+      correctLetters.push(letter);
+        
+      console.log(correctLetters);
       console.log("true");
-      letter.style.display="block";
+      inputLetter.value ="";
+      // letter.style.display="block";
       return
     }
     
   }
+  incorrectLetters.push(inputLetter.value);
+  console.log(incorrectLetters);
   console.log("false");
-
+  inputLetter.value ="";
 }
 submitBtn.addEventListener("click", function(){
   checkIfCorrect();
 });
 
+const scoreHolder = document.querySelector("#scoreHolder");
+
+function wrongLetter (){
+ // längden på incorrectLetters === points;
+}
+wrongLetter();
