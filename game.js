@@ -84,7 +84,6 @@ const incorrectLetters =[];
 /**************** GENOM ETT KLICK TAR VI BORT STARTPAGEN OCH VIDARE TILL GAMEPAGEN***************/
 startBtn.addEventListener("click",function(){
   startPage.style.display ="none";
-  //gamePage.style.display ="block";
 });
 
 
@@ -99,8 +98,6 @@ var lettersOfWord = choosenWord.split("");
 // break down the word in letters
 //loop to see if the letter is in the array of letters
 function displayWord(){
-  //wordDisplayer.innerHTML += lettersOfWord;
-  //wordDisplayer.style.display="none";
 }
 displayWord();
 
@@ -123,7 +120,6 @@ function checkIfCorrect(){
       console.log(correctLetters);
       console.log("true");
       inputLetter.value ="";
-      // letter.style.display="block";
       return
     }    
   }
