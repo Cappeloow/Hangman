@@ -5,8 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hangman</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="game.js" defer></script>
 </head>
 <body>
-    
+    <header>
+        <h1>Hangman <span id="man">/o/</span></h1>
+    </header>
+    <div class="container">
+        <div class="startPage">
+            <div class="paragrafDiv">
+            </div>
+            <button class="startBtn">Start the game</button>
+        </div>
+        <div class="gamePage">
+            <div class="containerOfPicture">
+                <img src="" alt="hangman" id="hangmanImg">
+            <p id="scoreHolder">WRONG LETTERS:</p>
+            </div>
+            <div class="wordContainer">
+                <p id = wordDisplayer></p>
+            </div>  
+            <div class="containerOfInput">
+                <input type="text" id="inputLetter" placeholder="Place one letter here">
+                <button id="Submit">Submit</button>
+            </div>
+        </div>
+        <div class="winner">
+
+        </div>
+        <div class="loser">
+
+        </div>    
+    </div>
 </body>
 </html>
