@@ -1,7 +1,8 @@
 const emptyPage = document.querySelector(".container");
 const startPage = document.querySelector(".startPage");
 const gamePage = document.querySelector(".gamePage");
-
+const pictureContainer = document.querySelector(".containerOfPicture");
+const hangmanImg = document.getElementById('hangmanImg');
 const startBtn = document.querySelector(".startBtn");
 const paragrafDiv = document.querySelector(".paragrafDiv");
 const wordDisplayer = document.querySelector("#wordDisplayer");
@@ -13,6 +14,31 @@ let fromI = 0;
 let currentStrikes = 0;
 let chosenWordCharList = [];
 let displayedChosenWordCharList = [];
+
+displayPicture();
+
+/**********Display Picture**********/
+
+function displayPicture(){
+  if (currentStrikes == 0){
+    hangmanImg.src = 'img/0.png';
+  }
+  else if (currentStrikes == 1){
+    hangmanImg.src = 'img/1.png';
+  }
+  else if (currentStrikes == 2){
+    hangmanImg.src = 'img/2.png';
+  }
+  else if (currentStrikes == 3){
+    hangmanImg.src = 'img/3.png';
+  }
+  else if (currentStrikes == 4){
+    hangmanImg.src = 'img/4.png';
+  }
+  else if (currentStrikes == 5){
+    hangmanImg.src = 'img/5.png';
+  }
+}
 
 /**********JUST INSERTS THE INSTRUCTION PARAGRAF**********/
 function writingtext(location, text){
@@ -105,6 +131,7 @@ function checkIfCorrect(){
   console.log(incorrectLetters);
   console.log("false");
   currentStrikes++
+  displayPicture();
 
   if (maxStrikes <= currentStrikes){
     console.log(`maxStrikes: ${maxStrikes}, currentStrikes: ${currentStrikes}`)
