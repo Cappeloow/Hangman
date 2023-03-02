@@ -53,19 +53,22 @@ writingtext();
 /*****************LIST OF WORDS THAT WE'RE GOING TO USE FOR THE GAME*************/
 
 const listOfWords = [
-  "sallad",
-  "kiwi",
+  "tiden",
+  "tokig",
   "juice",
   "hundra",
-  "vatten",
-  "spaghetti",
-  "promenera"
+  "valp",
+  "dator",
+  "film",
+  "dagbok",
+  "bälte",
+  "fartskylt"
   ];
 
   /**********************SLUMPMÄSSIGT TAR VI UT ETT ORD FRÅN LISTAN****************/
 var choosenWord = listOfWords[Math.floor(Math.random()*listOfWords.length)];
 
-console.log(choosenWord);
+
 
 for(const letter of choosenWord){
   chosenWordCharList.push(letter);
@@ -75,8 +78,6 @@ document.querySelector("#Submit");
 for(const letter of displayedChosenWordCharList){
   wordDisplayer.innerHTML += `${letter} `
 }
-console.log(chosenWordCharList);
-console.log(displayedChosenWordCharList);
 
 const correctLetters = [];
 const incorrectLetters =[];
@@ -84,6 +85,7 @@ const incorrectLetters =[];
 /**************** GENOM ETT KLICK TAR VI BORT STARTPAGEN OCH VIDARE TILL GAMEPAGEN***************/
 startBtn.addEventListener("click",function(){
   startPage.style.display ="none";
+  gamePage.style.display ="block";
 });
 
 
@@ -105,41 +107,49 @@ function checkIfCorrect(){
   
   for(const i in chosenWordCharList)
   {
-    
-    if(inputLetter.value ===chosenWordCharList[i]){
+
+    if(inputLetter.value.toLowerCase() ===chosenWordCharList[i]){
       displayedChosenWordCharList[i] = chosenWordCharList[i] 
-      console.log(displayedChosenWordCharList);
       let displayedWord = "";
       for(const letter of displayedChosenWordCharList){
        
         displayedWord += `${letter} `;
-        
       }
       wordDisplayer.innerHTML = displayedWord;
       correctLetters.push(chosenWordCharList[i]);
-      console.log(correctLetters);
-      console.log("true");
+      const displayedWordChecker = displayedChosenWordCharList.join("")
+      const ChosenWordChecker = chosenWordCharList.join("") 
+      if (ChosenWordChecker === displayedWordChecker){
+        let paragraphSuccess = document.createElement("p");
+        paragraphSuccess.innerText = "YOU MADE IT!";
+        paragraphSuccess.id ="pSuccess";
+        gamePage.append(paragraphSuccess);
+        setTimeout(() => {
+          window.location.href ="index.html";
+      }, 2000);
+      }
+
       inputLetter.value ="";
       return
     }    
   }
   incorrectLetters.push(inputLetter.value);
-  console.log(incorrectLetters);
-  console.log("false");
   currentStrikes++
   displayPicture();
 
   if (maxStrikes <= currentStrikes){
-    console.log(`maxStrikes: ${maxStrikes}, currentStrikes: ${currentStrikes}`)
-    console.log("You loose");
+    let paragraphSuccess = document.createElement("p");
+    paragraphSuccess.innerText = "YOU LOSE!";
+    paragraphSuccess.id ="pSuccess";
+    gamePage.append(paragraphSuccess);
+    setTimeout(() => {
+      window.location.href ="index.html";
+  }, 2000);
+
   }
+
+
   inputLetter.value ="";
 }
 submitBtn.addEventListener("click", checkIfCorrect);
 
-const scoreHolder = document.querySelector("#scoreHolder");
-
-function wrongLetter (){
- // längden på incorrectLetters === points;
-}
-wrongLetter();
