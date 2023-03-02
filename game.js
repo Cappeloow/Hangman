@@ -53,17 +53,49 @@ writingtext();
 /*****************LIST OF WORDS THAT WE'RE GOING TO USE FOR THE GAME*************/
 
 const listOfWords = [
-  "tiden",
-  "tokig",
-  "juice",
-  "hundra",
-  "valp",
-  "dator",
-  "film",
-  "dagbok",
-  "bälte",
-  "fartskylt"
-  ];
+  "rat",
+  "fox",
+  "owl",
+  "bee",
+  "pig",
+  "bat",
+  "cow",
+  "hen",
+  "ram",
+  "ewe",
+  "ant",
+  "elk",
+  "mole",
+  "hare",
+  "toad",
+  "duck",
+  "frog",
+  "bear",
+  "wolf",
+  "deer",
+  "seal",
+  "dove",
+  "worm",
+  "crab",
+  "clam",
+  "snail",
+  "crow",
+  "hawk",
+  "swan",
+  "orca",
+  "goose",
+  "skunk",
+  "lynx",
+  "zebra",
+  "gull",
+  "ibex",
+  "koala",
+  "llama",
+  "otter",
+  "panda",
+  "quail"
+];
+
 
   /**********************SLUMPMÄSSIGT TAR VI UT ETT ORD FRÅN LISTAN****************/
 var choosenWord = listOfWords[Math.floor(Math.random()*listOfWords.length)];
