@@ -73,17 +73,17 @@ color:#fffffe;
 border:#e53170;
 font-weight: bold;
 transition:1s;
+cursor:pointer;
 }
 .startBtn:hover{
   background-color: #e53170;
   border-radius:10px;
   font-size:21px;
   transition:1s;
-  
 }
 
 .paragrafDiv{
-  width:30%;
+  width:40%;
   height:64%;
   color:#a7a9be;
   text-align: center;
@@ -115,6 +115,10 @@ transition:1s;
   width:100%;
   color:White;
 }
+.containerOfPicture > img {
+ height:700px;
+ width:700px;
+}
 .containerOfInput{
   height:20%;
   width:100%;
@@ -124,20 +128,28 @@ transition:1s;
   align-items: center;
 }
 #inputLetter{
-  width:150px;
-  height:40px;
+  width:170px;
+  height:50px;
   border:1px solid black;
   border-radius:4px;
   text-align: center;
+  font-size:15px;
 }
 #Submit{
-  width:150px;
+  width:170px;
   height:40px;
   border:1px solid black;
   border-radius:4px;
   background-color: #ff8906;
   color:#fffffe;
   margin:5px;
+  cursor:pointer;
+  font-size:16px;
+  transition:1s;
+}
+#Submit:hover{
+  background-color: #ee9938;
+  transition:1s;
 }
 .wordContainer{
   width:100%;
@@ -145,4 +157,49 @@ transition:1s;
   font-size:5rem;
   text-align: center;
   color:#e53170;
+}
+
+
+@media screen and (max-width: 1000px) {
+  /* CSS rules for devices with a minimum height of 600px */
+  .startPage{
+    flex-direction: column;
+   }
+
+  .paragrafDiv{
+    width:60%;
+    height:30%;
+    color:#a7a9be;
+    text-align: center;
+    padding:10px;
+    border-radius:10px;
+    transition: 1s;
+
+  }
+  .containerOfPicture > img {
+    height:500px;
+    width:500px;
+   }
+}
+
+
+@media screen and (max-width: 600px) {
+  /* CSS rules for devices with a minimum height of 600px */
+  .startPage{
+    flex-direction: column;
+   }
+
+  .paragrafDiv{
+    width:90%;
+    height:40%;
+    color:#a7a9be;
+    text-align: center;
+    padding:10px;
+    border-radius:10px;
+    transition: 1s;
+  }
+  .containerOfPicture > img {
+    height:290px;
+    width:290px;
+   }
 }

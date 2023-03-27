@@ -47,6 +47,8 @@ function writingtext(location, text){
     fromI++;
     setTimeout(writingtext, 5);
   }
+ 
+
 }
 writingtext();
 
@@ -60,9 +62,6 @@ const listOfWords = [
   "pig",
   "bat",
   "cow",
-  "hen",
-  "ram",
-  "ewe",
   "ant",
   "elk",
   "mole",
@@ -74,26 +73,19 @@ const listOfWords = [
   "wolf",
   "deer",
   "seal",
-  "dove",
   "worm",
   "crab",
-  "clam",
   "snail",
   "crow",
   "hawk",
   "swan",
-  "orca",
   "goose",
   "skunk",
-  "lynx",
   "zebra",
-  "gull",
-  "ibex",
   "koala",
   "llama",
   "otter",
   "panda",
-  "quail"
 ];
 
 
